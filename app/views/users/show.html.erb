@@ -1,0 +1,24 @@
+<p>
+  <b>Username:</b>
+  <%=h @user.username %>
+</p>
+
+<p>
+  <b>Countrycode:</b>
+  <%=h @user.countrycode %>
+</p>
+
+<p>
+  <b>Areacode:</b>
+  <%=h @user.areacode %>
+</p>
+
+<p>
+  <b>Primary number:</b>
+  <%=h @user.primarynumber %>
+</p>
+
+<p>
+  <%= link_to 'Change Password', edit_user_path(@user) %> |
+  <%= link_to 'Edit Account', edit_account_path(@user.account) %>
+</p>

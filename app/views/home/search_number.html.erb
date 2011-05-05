@@ -1,0 +1,20 @@
+<% if @http_response.kind_of? Net::HTTPSuccess %>
+    <% unless @response['available_phone_numbers'].empty? %>
+
+      <h3>Choose a number</h3>
+
+      <% @response['available_phone_numbers'].each do |number| %>
+
+        <form method='POST' action='/home/buy_number'>
+          <label> <%=h number['friendly_name'] %> </label>
+          <input type='hidden' name='PhoneNumber' value= ' <%= number['phone_number'] %> '/>
+          <input type='submit' value='BUY'/>
+        </form>
+
+      <% end %>
+    <% else %>
+      <b>Sorry!</b> <p>Twilio doesn't have any numbers available that match those constraints.</p>
+    <% end %>
+    <% else %>
+      <b>Sorry!</b> <%=h @response['message'] %>.
+    <% end %>

@@ -1,0 +1,18 @@
+<h3>Find a Twilio number to buy</h3>
+
+   
+<% form_tag '/home/search_number' do %>
+
+  <p>
+  <label>near US postal code (e.g. 94117)::</label> <%= text_field_tag :postal_code %> <br />
+
+  <label>near this other number (e.g. +4156562345): </label> <%= text_field_tag :near_number %> <br />
+
+  <label>matching this pattern (e.g. 415***EPIC): </label> <%= text_field_tag :contains %> <br />
+  </p>
+
+  <p>
+    <%= submit_tag 'Search' %> 
+  </p>
+
+<% end %>

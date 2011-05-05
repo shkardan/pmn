@@ -1,0 +1,28 @@
+<p>
+  <b>Sid:</b>
+  <%=h @txt.sid %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%=h @txt.to %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%=h @txt.from %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @txt.body %>
+</p>
+
+<p>
+  <b>Direction:</b>
+  <%=h @txt.direction %>
+</p>
+
+
+<%= link_to 'Edit', edit_txt_path(@txt) %> |
+<%= link_to 'Back', txts_path %>

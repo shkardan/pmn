@@ -1,0 +1,16 @@
+<p>
+  <b>Discount Frequency:</b>
+  <%=h @account.frequency %>
+</p>
+
+<p>
+  <b>Discount:</b>
+  <%=h @account.discount %>
+</p>
+
+<p>
+  <% for category in @account.categories %>
+    <%=h category.name %><br />
+  <% end %>
+</p>
+<%= link_to 'Edit', edit_account_path %> | <%= link_to 'Back to User', @user %>

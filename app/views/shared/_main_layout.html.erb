@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <script type="text/javascript">
+  <!--
+  var form_submitted = false;
+  function submit_form ()  {
+    if ( form_submitted )  {
+      alert ( "Your form has already been submitted. Please wait..." );
+      return false;
+    }
+    else {
+      form_submitted = true;
+      return true;
+    }
+  }
+  // -->
+  </script>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title> <%= controller.controller_name %>.<%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'onecolumn' %>
+</head>
+
+<body>
+
+  <div id="container">
+	<div id="header">
+		<h1>
+			Phorget Me Not ;)
+		</h1>
+	</div>
+	<div id="navigation">
+		<%= render :partial => 'shared/main_menu' %>
+	</div>
+
+    <div id="subnavigation">
+		<%= render :partial => 'shared/side_menu' %>
+	</div>
+    
+    <div id="content">
+		<p style="color: blue">
+          <%= flash[:notice] %>
+        </p>
+
+      <%= yield %>
+	</div>
+		
+	<div id="footer">
+      Copyright © Phorget-me-not, 2011
+	</div>
+
+</div>
+
+</body>
+</html>
+

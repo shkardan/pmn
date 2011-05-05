@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  username: MyString
+  password_salt: MyString
+  password_hash: MyString
+  primary_number: MyString
+  areacode: MyString
+  countrycode: MyString
+
+two:
+  username: MyString
+  password_salt: MyString
+  password_hash: MyString
+  primary_number: MyString
+  areacode: MyString
+  countrycode: MyString

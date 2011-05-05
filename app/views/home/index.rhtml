@@ -1,0 +1,18 @@
+<h1>Login</h1>
+<p>
+  Enter your username and password to login:<br />
+</p>
+
+<% form_tag '/home/login' do %>
+
+  <p>
+  <b>Username:</b> <%= text_field_tag :username %> <br />
+
+  <b>Password:</b> <%= password_field_tag :password %> <br />
+  </p>
+
+  <p>
+    <%= submit_tag 'Login' %> | <%= link_to 'Register', '/home/register' %>
+  </p>
+
+<% end %>

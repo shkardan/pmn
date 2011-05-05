@@ -1,0 +1,20 @@
+<h1>Don't miss out!</h1>
+
+<p>Enter your cellphone number below and start receiving phonated deals!</p><br />
+
+<% form_for @user, :url => {:controller => "home", :action => "verify"} do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :country_code %>: <%= f.select :countrycode, %w{ 1 }, :selected => '1' %><br />
+  </p>
+  <p>
+    <%= f.label :area_code %>: <%= f.select :areacode, %w{ 613 }, :selected => '613' %><br />
+  </p>
+  <p>
+    <%= f.label :primary_number %>: <%= f.text_field :primarynumber %><br />
+  </p>
+  <p>
+    <%= f.submit "Verify" %>
+  </p>
+<% end %>

@@ -1,0 +1,23 @@
+<h1>Editing user</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%=h @user.username %> 
+  </p>
+  <p>
+    +<%=h @user.countrycode %> (<%=h @user.areacode %>) <%=h @user.primarynumber %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.submit "Update" %> | <%= link_to 'Show', @user %>
+  </p>
+<% end %>

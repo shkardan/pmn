@@ -1,0 +1,27 @@
+## YAML Template.
+
+development:
+  api_key: e9bcf2e54f506f60c891812042546b71
+  secret_key: 03310514fb49be27cc6b5500115e23ea
+  callback_url: http://127.0.0.1:3001/
+  pretty_errors: true
+  set_asset_host_to_callback_url: false
+  tunnel:
+    public_host_username:
+    public_host:
+    public_port: 4007
+    local_port: 3001
+    server_alive_interval: 0
+
+production:
+  api_key: e9bcf2e54f506f60c891812042546b71
+  secret_key: 03310514fb49be27cc6b5500115e23ea
+  callback_url: http://www.facebook-connect-demo.com
+  set_asset_host_to_callback_url: false
+  tunnel:
+    public_host_username:
+    public_host:
+    public_port: 4007
+    local_port: 3001
+    server_alive_interval: 0
+

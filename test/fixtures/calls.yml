@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sid: MyString
+  from: MyString
+  to: 
+  status: MyString
+  direction: MyString
+  name: MyString
+
+two:
+  sid: MyString
+  from: MyString
+  to: 
+  status: MyString
+  direction: MyString
+  name: MyString

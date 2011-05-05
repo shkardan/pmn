@@ -1,0 +1,13 @@
+<ul>
+  <li><%= link_to_if session[:user_id].nil?, 'REGISTER', :controller => 'home', :action => 'register' do
+          link_to 'HOME', :controller => 'users', :action => 'show'
+      end %>
+  </li>
+  <li><a href="#">DEALS</a></li>
+  <li><a href="#">HOW IT WORKS?</a></li>
+  <li><a href="#">BLOG</a></li>
+  <li><%= link_to_if session[:user_id].nil?, 'LOGIN', :controller => 'home', :action => 'index' do
+          link_to 'LOGOUT', :controller => 'home', :action => 'logout'
+      end %>
+  </li>
+</ul>

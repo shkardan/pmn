@@ -1,0 +1,28 @@
+<h1>Listing users</h1>
+
+<p>
+<table>
+  <tr>
+    <th>Username</th>    
+    <th>Primary Number</th>
+    <th>Area Code</th>
+    <th>Country Code</th>    
+  </tr>
+
+<% for user in @users %>
+  <tr>
+    <td><%=h user.username %></td>
+    <td><%=h user.primarynumber %></td>
+    <td><%=h user.areacode %></td>
+    <td><%=h user.countrycode %></td>  
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+</p>
+<p>
+  <%= link_to 'New user', new_user_path %>
+</p>

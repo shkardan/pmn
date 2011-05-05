@@ -1,0 +1,36 @@
+<h1>Editing call</h1>
+
+<% form_for(@call) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :sid %><br />
+    <%= f.text_field :sid %>
+  </p>
+  <p>
+    <%= f.label :from %><br />
+    <%= f.text_field :from %>
+  </p>
+  <p>
+    <%= f.label :to %><br />
+    <%= f.text_field :to %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :direction %><br />
+    <%= f.text_field :direction %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @call %> |
+<%= link_to 'Back', calls_path %>

@@ -1,0 +1,52 @@
+## YAML Template.
+
+development:
+  # Twilio REST API version
+  #API_VERSION = '2010-04-01'
+  api_version: 2010-04-01
+
+  # Twilio AccountSid and AuthToken
+  #ACCOUNT_SID = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+  #ACCOUNT_TOKEN = 'YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'
+  account_sid: ACbc99d68db1dafa2d003038032f8096e8
+  account_token: 50d26881624be4adb019770a2748b7f0
+
+  # Outgoing Caller ID previously validated with Twilio
+  #$CALLER_ID = 'NNNNNNNNNN';
+  caller_id: 18882400878
+  base_url: http://high-stream-221.heroku.com/
+
+
+test:
+  # Twilio REST API version
+  #API_VERSION = '2010-04-01'
+  api_version: 2010-04-01
+
+  # Twilio AccountSid and AuthToken
+  #ACCOUNT_SID = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+  #ACCOUNT_TOKEN = 'YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'
+  account_sid: ACbc99d68db1dafa2d003038032f8096e8
+  account_token: 50d26881624be4adb019770a2748b7f0
+
+  # Outgoing Caller ID previously validated with Twilio
+  #$CALLER_ID = 'NNNNNNNNNN';
+  caller_id: 18882400878
+  base_url: http://high-stream-221.heroku.com/
+
+
+production:
+   # Twilio REST API version
+  #API_VERSION = '2010-04-01'
+  api_version: 2010-04-01
+
+  # Twilio AccountSid and AuthToken
+  #ACCOUNT_SID = 'ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+  #ACCOUNT_TOKEN = 'YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'
+  account_sid: ACbc99d68db1dafa2d003038032f8096e8
+  account_token: 50d26881624be4adb019770a2748b7f0
+
+  # Outgoing Caller ID previously validated with Twilio
+  #$CALLER_ID = 'NNNNNNNNNN';
+  caller_id: 18882400878
+  base_url: http://high-stream-221.heroku.com/
+

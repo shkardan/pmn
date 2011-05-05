@@ -1,0 +1,17 @@
+<h1>New coupons</h1>
+
+<p>
+  Enter how many coupons you might need:<br />
+</p>
+
+<% form_tag coupons_path do %>
+
+  <p>
+  <b>Number:</b> <%= text_field_tag :number %> <br />
+  </p>
+
+  <p>
+    <%= submit_tag 'Generate' %> | <%= link_to 'Back', coupons_path %>
+  </p>
+
+<% end %>

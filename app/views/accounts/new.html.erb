@@ -1,0 +1,27 @@
+<h1>New account</h1>
+
+<% form_for( @account ) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :frequency %>
+    <%= f.select :frequency, %w{ 1 2 3 4 5 10 }, :selected => '2' %>
+  </p>
+
+   <p>
+    <%= f.label :discount %>
+    <%= f.text_field :discount %>
+  </p>
+
+  <p>
+    <% for category in @categories %>
+    <%= check_box_tag 'category_ids[]', category.id %><b><%=h category.name %>:</b> <%=h category.description %><br />
+    <% end %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %> | <%= link_to 'Back', account_path %>
+  </p>
+<% end %>
+
+

@@ -1,0 +1,32 @@
+<h1>Editing txt</h1>
+
+<% form_for(@txt) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :sid %><br />
+    <%= f.text_field :sid %>
+  </p>
+  <p>
+    <%= f.label :to %><br />
+    <%= f.text_field :to %>
+  </p>
+  <p>
+    <%= f.label :from %><br />
+    <%= f.text_field :from %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :direction %><br />
+    <%= f.text_field :direction %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @txt %> |
+<%= link_to 'Back', txts_path %>

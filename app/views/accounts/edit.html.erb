@@ -1,0 +1,26 @@
+<h1>Editing account</h1>
+
+<% form_for @account do |f| %> 
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :frequency %>    
+    <%= f.select :frequency, %w{ 1 2 3 4 5 10 }, :selected => @account.frequency.to_s %>
+  </p>
+
+  <p>
+    <%= f.label :discount %>
+    <%= f.text_field :discount %>
+  </p>
+
+  <p>
+  <% for category in @categories %>
+    <%= check_box_tag 'category_ids[]', category.id, @account.categories.include?(category) %><b><%=h category.name %>:</b> <%=h category.description %><br />
+  <% end %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %> | <%= link_to 'Show', account_path %> | <%= link_to 'Back to account', account_path %>
+  </p>
+<% end %>
+
+

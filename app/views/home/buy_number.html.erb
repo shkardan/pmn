@@ -1,0 +1,5 @@
+<% if @http_response.kind_of? Net::HTTPSuccess %>
+  <b>Success!</b> You now own the number <b><%=h @response['phone_number'] %> </b>.
+<% else %>
+  <b>Sorry!</b> <%=h @response['message'] %> .
+<% end %>

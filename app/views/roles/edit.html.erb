@@ -1,0 +1,23 @@
+<h1>Editing role</h1>
+
+<% form_for(@role) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+  <% for right in @rights %>
+    <%= check_box_tag 'right_ids[]', right.id, @role.rights.include?(right) %><b><%=h right.name %>:</b> <%=h right.controller %>, <%=h right.action %><br />
+  <% end %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @role %> |
+<%= link_to 'Back', roles_path %>

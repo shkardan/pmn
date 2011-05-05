@@ -1,0 +1,33 @@
+<p>
+  <b>Sid:</b>
+  <%=h @call.sid %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%=h @call.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%=h @call.to %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @call.status %>
+</p>
+
+<p>
+  <b>Direction:</b>
+  <%=h @call.direction %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @call.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_call_path(@call) %> |
+<%= link_to 'Back', calls_path %>

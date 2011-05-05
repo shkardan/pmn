@@ -1,0 +1,8 @@
+<Response>
+    <Say>Hello there!</Say>
+    <Say>Please enter your four digit coupon.</Say>
+    <Gather numDigits="4" action="http://high-stream-221.heroku.com/pbx/check" method="GET">        
+        <Pause length="60" />
+    </Gather>
+    <Hangup/>
+</Response>
